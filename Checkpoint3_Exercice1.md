@@ -146,7 +146,7 @@ New-ADUser -Name "Lionel Marchand" `
            -Path "OU=DirectionDesRessourcesHumaines,OU=LabUsers,DC=TSSR,DC=LAN"
 
 ```
-![newuser]().  
+![newuser](https://github.com/damdupre/checkpoint-3/blob/main/images/new%20user.png).    
 
 
 
