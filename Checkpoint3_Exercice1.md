@@ -127,17 +127,17 @@ J'ai essayer de faire un script pout crée le nouvel utilisateur avec les attrib
 
 
 ### Q.1.1.2
-Pour la céation de l' OU je me place sur à la racine du domaine est je fait clic droit **New -> Organization Unit** .  
+Pour la céation de l' OU je me place sur à la racine du domaine est je fait clic droit **New -> Organization Unit** .    
 ![création OU](https://github.com/damdupre/checkpoint-3/blob/main/images/cr%C3%A9ation%20OU.png)   
-J'ai par la suite sélectionné l'utilisateur à déplacer puis clic droit sur **Move** .  
+J'ai par la suite sélectionné l'utilisateur à déplacer puis clic droit sur **Move** .    
 ![move](https://github.com/damdupre/checkpoint-3/blob/main/images/move.png)  
-On vois bien l'utilisateur dans la bonne OU .
+On vois bien l'utilisateur dans la bonne OU .  
 ![desact](https://github.com/damdupre/checkpoint-3/blob/main/images/DESACT.png) .  
 ### Q.1.1.3
-Je commence par crée un groupe `DeactivatedUsers`
+Je commence par crée un groupe `DeactivatedUsers`  
 ![newgroup](https://github.com/damdupre/checkpoint-3/blob/main/images/new%20group.png)  
 
-On vois que l'utilisateur fait partie du groupe `GrpUsersDirectionDesRessourcesHumaines` et du groupe `Domain Users`
+On vois que l'utilisateur fait partie du groupe `GrpUsersDirectionDesRessourcesHumaines` et du groupe `Domain Users`  
 ![group](https://github.com/damdupre/checkpoint-3/blob/main/images/group.png)  
 Je clique sur remove pour la supprimer du groupe `GrpUsersDirectionDesRessourcesHumaines` puis sur `Add` pour l'ajouter au nouveaux groupe `DeactivatedUsers`   
 
@@ -175,14 +175,14 @@ $acl.SetAccessRule($accessRule)
 Set-Acl -Path $newUserFolder -AclObject $acl
 Write-Host "Permissions définies pour $newUser sur $newUserFolder"
 ```
-resulat :
-![resultat](https://github.com/damdupre/checkpoint-3/blob/main/images/resultat.png)
+resulat :  
+![resultat](https://github.com/damdupre/checkpoint-3/blob/main/images/resultat.png)  
 ![dossier](https://github.com/damdupre/checkpoint-3/blob/main/images/image.png).  
 
 ## Partie 2 : Restriction utilisateurs
 
 ### Q.1.2.1
-Pour trouver l'utilisateur **Gabriel Ghul** j'ai rechercher dans les membres du groupe `Domain Users` (car il y a une faute dans le nom) .  
+Pour trouver l'utilisateur **Gabriel Ghul** j'ai rechercher dans les membres du groupe `Domain Users` (car il y a une faute dans le nom) .    
 ![recherche](https://github.com/damdupre/checkpoint-3/blob/main/images/recherche.png)  
 
 Je allé sur le'utilisateur en je suis aller dans les propriété du compte, la dans `Account` en cliquant sur `Logon Hours`on a une interface qui nous permet de gérer les heure de connexion.  
@@ -200,6 +200,6 @@ J'ai créer une GPO lié à l'OU `LabUsers` pour définir la stratégie de mot d
 ## Partie 3 : Lecteurs réseaux  
 
 ### Q.1.3.1 
-Dans le gestionnaire de GPO je créer une GPO avec pour chemin `User Configuration->Préférence->Windows Settings->Drive Maps` clique droit `New` .
-![mappage 1](https://github.com/damdupre/checkpoint-3/blob/main/images/mappage%201.png)  
-![mappage2](https://github.com/damdupre/checkpoint-3/blob/main/images/mappage%202.png)  
+Dans le gestionnaire de GPO je créer une GPO avec pour chemin `User Configuration->Préférence->Windows Settings->Drive Maps` clique droit `New` .  
+![mappage 1](https://github.com/damdupre/checkpoint-3/blob/main/images/mappage%201.png)    
+![mappage2](https://github.com/damdupre/checkpoint-3/blob/main/images/mappage%202.png)    
