@@ -209,7 +209,7 @@ resulat :
 Pour trouver l'utilisateur **Gabriel Ghul** j'ai rechercher dans les membres du groupe `Domain Users` (car il y a une faute dans le nom) .    
 ![recherche](https://github.com/damdupre/checkpoint-3/blob/main/images/recherche.png)  
 
-Je allé sur le'utilisateur en je suis aller dans les propriété du compte, la dans `Account` en cliquant sur `Logon Hours`on a une interface qui nous permet de gérer les heure de connexion.  
+Je allé sur l'utilisateur, ensuit je suis aller dans les propriétés du compte, la dans `Account` en cliquant sur `Logon Hours`on a une interface qui nous permet de gérer les heure de connexion.  
 ![blocage](https://github.com/damdupre/checkpoint-3/blob/main/images/blocage.png)  
 on oublie pas d'appliquer avant de sortir .  
 
