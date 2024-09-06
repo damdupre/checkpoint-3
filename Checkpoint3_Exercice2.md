@@ -22,7 +22,7 @@ Dans le fichier de config je modifie le ligne `PasswordAuthentication yes` par `
 
 ### Q.2.3.1
 Avec la commande `df -h` on obtient la liste des systeme de fichier monté.
-![fichier]()
+![fichier](https://github.com/damdupre/checkpoint-3/blob/main/images/fichier.png)
 
 ### Q.2.3.2
 
@@ -31,21 +31,21 @@ Avec la commande `lsblk` on peut voir qu'il il y un systeme raid et un systeme l
 
 ### Q.2.3.3
 Aprés avoir ajouté un nouveaux disque 
-![ajout dd]()  
+![ajout dd](https://github.com/damdupre/checkpoint-3/blob/main/images/ajout%20dd.png)  
 J'ai d'abord contrôler l'état du raid avec `sudo mdadm --detail /dev/md0`, je me suis aperçu qu'il manquait un disque au raid.  
 Avec la commance `sudo mdadm --manage /dev/md0 --add /dev/sdb` j'ai ajouter le disque sdb au raid et la reconstruction c'est lancé.
-![reconstruction]()  
+![reconstruction](https://github.com/damdupre/checkpoint-3/blob/main/images/reconstruction.png)  
 Puis je contôle de nouveaux l'état du raid
-![raid ok]()  
+![raid ok](https://github.com/damdupre/checkpoint-3/blob/main/images/raid%20ok.png)  
 Le raid est de nouveaux opérationnel.  
 
 ### Q.2.3.4 
 Je commence par contrôler le lvm avec `sudo vgdisplay`
-![lvm control]()  
+![lvm control](https://github.com/damdupre/checkpoint-3/blob/main/images/lvm%20control.png)  
 Je créer un LV de 2G dans le VG cp3-vg .
 `sudo lvcreate -L 2G lv_bareos_storage cp3-vg` 
 resultat .
-![lvcreate]()  
+![lvcreate](https://github.com/damdupre/checkpoint-3/blob/main/images/lvcreate.png)  
 J'ai formater ce LV en ext4 avec `sudo mkfs.ext4 /dev/cp3-vg/lv_bareos_storage`  
 Puis j'ai modifier le fichier fstab pour pouvoir monter le LV automatiquement au demarrage `echo "/dev/cp3-vg/lv_bareos_storage /var/lib/bareos/storage ext4 defaults 0 2" | sudo tee -a /etc/fstab` .  
 
@@ -70,7 +70,7 @@ Les régle appliquées sont :
 - accepter les paquets local (lo)  
 - accepter les connexion ssh (port22)  
 - accepter l'icmp (ping)  
-![regle]()  
+![regle](https://github.com/damdupre/checkpoint-3/blob/main/images/regle.png)  
 
 ### Q.2.5.2
 Les communication local sont permise.
@@ -101,7 +101,7 @@ sudo nft add rule inet bareos forward tcp dport 9102 accept
 sudo nft add rule inet bareos forward tcp dport 9103 accept
 ```
 resulat  
-![regle bareos]()  
+![regle bareos](https://github.com/damdupre/checkpoint-3/blob/main/images/regle%20bareos.png)  
 
 ## Partie 6 : Analyse de logs
 
