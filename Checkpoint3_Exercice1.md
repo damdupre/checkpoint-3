@@ -123,7 +123,31 @@ RemovedProperties                    : {}
 ModifiedProperties                   : {}
 PropertyCount                        : 107
 ```
-J'ai essayer de faire un script pout crée le nouvel utilisateur avec les attributs, mais aprés plusieurs tentatives infurctueuses , j'ai crée l'utilisateur manuellement via l'interface graphique de AD en faisant un copier coller entre les deux propriété des utilisateurs.
+J'ai réalisé un script qui récupére les attribut de Kelly Rhameur et créé Lionel Marchand avec les même attributs.
+```ps1
+# Récupérer l'utilisateur source  
+$sourceUser = Get-ADUser -Identity "Kelly.Rhameur" -Properties *
+
+# Créer le nouvel utilisateur  
+New-ADUser -Name "Lionel Marchand" `
+           -GivenName "Lionel" `
+           -Surname "Marchand" `
+           -SamAccountName "Lionel.Marchand" `
+           -UserPrincipalName "Lionel.Marchandr@TSSR.LAN" `
+           -DisplayName "Lionel.Marchand" `
+           -Company $sourceUser.Company `
+           -Department $sourceUser.Department `
+           -Division $sourceUser.Division `
+           -Title $sourceUser.Title `
+           -EmailAddress "Lionel.Marchand".EmailAddress `
+           -Manager $sourceUser.Manager `
+           -AccountPassword (ConvertTo-SecureString "Azerty1*" -AsPlainText -Force) `
+           -Enabled $true `
+           -Path "OU=DirectionDesRessourcesHumaines,OU=LabUsers,DC=TSSR,DC=LAN"
+
+```
+![newuser]().  
+
 
 
 ### Q.1.1.2
