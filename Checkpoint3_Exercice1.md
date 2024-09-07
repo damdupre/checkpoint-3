@@ -146,9 +146,6 @@ New-ADUser -Name "Lionel Marchand" `
            -Path "OU=DirectionDesRessourcesHumaines,OU=LabUsers,DC=TSSR,DC=LAN"
 
 ```
-![newuser](https://github.com/damdupre/checkpoint-3/blob/main/images/new%20user.png).    
-
-
 
 ### Q.1.1.2
 Pour la céation de l' OU je me place sur à la racine du domaine est je fait clic droit **New -> Organization Unit** .    
@@ -163,10 +160,10 @@ Je commence par crée un groupe `DeactivatedUsers`
 
 On vois que l'utilisateur fait partie du groupe `GrpUsersDirectionDesRessourcesHumaines` et du groupe `Domain Users`  
 ![group](https://github.com/damdupre/checkpoint-3/blob/main/images/group.png)  
-Je clique sur remove pour la supprimer du groupe `GrpUsersDirectionDesRessourcesHumaines` puis sur `Add` pour l'ajouter au nouveaux groupe `DeactivatedUsers`   
+Je clique sur **remove** pour la supprimer du groupe `GrpUsersDirectionDesRessourcesHumaines` puis sur **Add** pour l'ajouter au nouveaux groupe `DeactivatedUsers`   
 
 ### Q.1.1.4
-Pour créer le dossier et archiver l'autre j'ai utilisé un script :
+Pour créer le dossier personelle  et archiver l'autre j'ai utilisé un script :
 ```ps1
 # Variables de l'environnement
 $newUser = "Lionel.Lemarchand"
