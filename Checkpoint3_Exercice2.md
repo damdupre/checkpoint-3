@@ -1,7 +1,7 @@
 ## Partie 1 : Gestion des utilisateurs
 
 ### Q.2.1.1
-Pour pouvoir créer un nouvel utilisateur , j'ai me suis d'abord mis en utilisateur  **root** , puis j'ai  à jour la vm `apt update` puis installer sudo `apt install sudo` j'ai ensuiter pu créer mon utilisateur avec `sudo adduser dams` .  
+Pour pouvoir créer un nouvel utilisateur , j'ai me suis d'abord mis en utilisateur  **root** , puis j'ai mis à jour la vm `apt update` puis installer sudo `apt install sudo` j'ai ensuiter pu créer mon utilisateur avec `sudo adduser dams` .  
 
 ### Q.2.1.2
 Pour ce compte il faut définir un mot de passe fort (12 caractéré avec des minuscule de majuscule des chiffres et des caractéres spéciaux),il aut crée un répertoir personnel et gérer les droits d'accés au systeme, on peux aussi définir un quota de disque utilisé et mettre en place une journalisation des événements.
@@ -27,7 +27,7 @@ Avec la commande `df -h` on obtient la liste des systeme de fichier monté.
 ### Q.2.3.2
 
 Avec la commande `lsblk` on peut voir qu'il il y un systeme raid et un systeme lvm .  
-![stockage]()  
+![stockage](https://github.com/damdupre/checkpoint-3/blob/main/images/info%20stockage.png)  
 
 ### Q.2.3.3
 Aprés avoir ajouté un nouveaux disque   
@@ -56,11 +56,11 @@ Il reste 1.79 Gib de disponible ..
 ## Partie 4 : Sauvegardes
 
 ### Q.2.4.1
-`bareos-dir ` est le composant central de bareos c'est lui qui centralise et coordonne les opération de sauvegarde et de restauration .  
+`bareos-dir ` est le composant central de bareos c'est lui qui centralise et coordonne les opérations de sauvegarde et de restauration .  
 
 `bareos-sd` gére le stockage des sauvegardes.
 
-`bareos-fd` est un composant installé sur les client il permet de lire les fichier et de les envoyer a `bareos-sd`
+`bareos-fd` est un composant, installé sur les clients il permet de lire les fichiers et de les envoyer à `bareos-sd` pour la sauvegarde.  
 
 ## Partie 5 : Filtrage et analyse réseau
 
